@@ -1,7 +1,7 @@
-def call(){
+def call(String userHub, String imageNme, String imageTag ){
     sh """
-     docker build -t radhagowthamhub/javaapp .
-     docker image tag radhagowthamhub/javaapp radhagowthamhub/javaapp:v1
-     docker image tag radhagowthamhub/javaapp radhagowthamhub/javaapp:latest
+     docker build -t ${userHub}${imageNme}.
+     docker image tag ${userHub}${imageNme} ${userHub}${imageNme}:${imageTag}
+     docker image tag ${userHub}${imageNme} ${userHub}${imageNme}:latest
     """
 }
