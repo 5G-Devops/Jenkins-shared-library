@@ -1,6 +1,6 @@
 def call(){
     sh """
-     trivy radhagowthamhub/javaapp:v1 > scan.txt
+     trivy  radhagowthamhub/javaapp radhagowthamhub/javaapp:latest > scan.txt
      cat scan.txt
     """
 }
