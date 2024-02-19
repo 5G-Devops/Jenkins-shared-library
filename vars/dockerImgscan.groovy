@@ -1,6 +1,6 @@
-def call(){
+def call(String userHub, String imageNme, String imageTag ){
     sh """
-     trivy image radhagowthamhub/javaapp:latest > scan.txt
+     trivy image ${userHub}/${imageNme}:latest > scan.txt
      cat scan.txt
     """
 }
